@@ -1,0 +1,54 @@
+{
+	"id": "cl237q3zw0000gwscbwlvdsxx",
+	"name": "anotherone",
+	"description": "An empty project template",
+	"created": "2022-04-17T11:36:24.765Z",
+	"blueprints": [
+		{
+			"version": "2019-10-24",
+			"connections": {
+				"EventBridgeRule01": {
+					"Test01": {
+						"type": "connection.event-bridge.event-bus",
+						"from": "EventBridgeRule01",
+						"to": "Test01"
+					}
+				}
+			},
+			"resources": {
+				"Test01": {
+					"type": "resource.external",
+					"name": "Test",
+					"externalResourceType": "resource.event-bridge.event-bus",
+					"identifier": "default",
+					"id": "Test01"
+				},
+				"EventBridgeRule01": {
+					"type": "resource.event-bridge.rule",
+					"name": "EventBridgeRule",
+					"ruleName": "My super rule3",
+					"eventPattern": {
+						"d": [
+							"d"
+						]
+					},
+					"id": "EventBridgeRule01"
+				}
+			},
+			"metadata": {
+				"designer": {
+					"resourcePositions": {
+						"Test01": {
+							"x": 632,
+							"y": 263,
+							"z": 0
+						}
+					}
+				}
+			},
+			"id": "cl237q3zw0000gwscbwlvdsxx",
+			"name": "anotherone",
+			"unsafe": false
+		}
+	]
+}
