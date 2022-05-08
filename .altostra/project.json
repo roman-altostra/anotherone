@@ -6,33 +6,18 @@
 	"blueprints": [
 		{
 			"version": "2019-10-24",
-			"connections": {
-				"EventBridgeRule01": {
-					"Test01": {
-						"type": "connection.event-bridge.event-bus",
-						"from": "EventBridgeRule01",
-						"to": "Test01"
-					}
-				}
-			},
+			"connections": {},
 			"resources": {
 				"Test01": {
-					"type": "resource.external",
-					"name": "Test",
-					"externalResourceType": "resource.event-bridge.event-bus",
-					"identifier": "default",
+					"type": "resource.compute.function",
+					"name": "test",
+					"memory": 512,
+					"timeout": 6,
+					"runtime": "nodejs12.x",
+					"packageType": "zip",
+					"entryPoint": "functions/test.handler",
+					"layers": [],
 					"id": "Test01"
-				},
-				"EventBridgeRule01": {
-					"type": "resource.event-bridge.rule",
-					"name": "EventBridgeRule",
-					"ruleName": "My super rule3",
-					"eventPattern": {
-						"d": [
-							"d"
-						]
-					},
-					"id": "EventBridgeRule01"
 				}
 			},
 			"metadata": {
@@ -40,7 +25,7 @@
 					"resourcePositions": {
 						"Test01": {
 							"x": 632,
-							"y": 263,
+							"y": 272.25,
 							"z": 0
 						}
 					}
